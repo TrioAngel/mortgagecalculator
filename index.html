@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta 	charset="utf-8">
+	<title>calculator</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<img src="bg.jpg">
+	<div class="container top-part">
+			<div class="row">
+				<div class="col-md columns">
+					<form>
+						<div class="style1">
+							<label for="range1">Стоимость недвижимости (руб.):</label>
+							<input type="range" class="custom-range" min="0" max="100000000" step="100000" id="range1">
+							<input type="number" id="rangeval1" value="50000000">
+						</div>
+
+						<div class="style1">
+							<label for="range2">Первоначальный взнос (руб.):
+							</label>
+							<input type="range" class="custom-range" min="0" max="100000000" step="100000" id="range2">
+							<input type="number" id="rangeval2" value="50000000">
+						</div>
+
+						<div class="form-row style1">
+							<div class="col">
+								<label for="inputState">Срок</label>
+								<select id="inputState" class="form-control">
+									<option>1 лет</option>
+									<option>2 лет</option>
+									<option>3 лет</option>
+									<option>4 лет</option>
+									<option>5 лет</option>
+									<option>6 лет</option>
+									<option>7 лет</option>
+									<option>10 лет</option>
+									<option>15 лет</option>
+									<option selected>20 лет</option>
+									<option>25 лет</option>
+									<option>30 лет</option>
+								</select>
+							</div>
+							<div class="col style1">
+								<label>Ставка, %</label>
+								<input type="number" max="100" min="0" step="0.1" id="percent" value="10" class="form-control">
+							</div>
+						</div>
+						<div align="center">
+							<br>
+							<button type="button" class="btn btn-primary" id="calc">Cчитать</button>
+						</div>
+					</form>
+				</div>
+
+				<div class="col-md columns">
+					<div class="row">
+						<div class="col">
+							<div id="blue"></div>
+							<h6>Кредит</h6>
+						</div>
+						<div class="col">
+							<div id="orange"></div>
+							<h6>Переплата</h6>
+						</div>
+						
+					</div>
+					<div id="range-color">
+					</div>
+					<div id="results">
+						<h3>Результаты расчета</h3>
+						<div>
+							<ul>
+								<li>
+									<div class="resultstyle">
+										<span class="style1">Сумма кредита</span>
+										<span id="result1" class="right">0 руб.</span>
+									</div>
+								</li>
+								<li>
+									<div class="resultstyle">
+										<span class="style1">Ежемесячный платеж</span>
+										<span id="result2" class="right">0 руб.</span>
+									</div>
+								</li>
+								<li>
+									<div class="resultstyle">
+										<span class="style1">Переплата по кредиту</span>
+										<span id="result3" class="right">0 руб.</span>
+									</div>
+								</li>
+								<li>
+									<div class="resultstyle">
+										<span class="style1">Общая выплата</span>
+										<span id="result4" class="right">0 руб.</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>	
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
